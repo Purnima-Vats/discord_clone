@@ -4,7 +4,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <div className="bg-indigo-500 h-full text-white">
+        <div className="flex items-center justify-center h-screen overflow-hidden">
             {children}
         </div>
     );
