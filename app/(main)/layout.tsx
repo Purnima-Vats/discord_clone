@@ -11,7 +11,7 @@ const MainLayout = async ({
             <div className='sm:hidden md:flex h-screen w-[72px] z-30 flex-col fix inset-y-0'>
                 <NavSidebar/>
             </div>
-            <main className='h-full'> {/* md:pl-[72px] */}
+            <main className='h-full w-full'> {/* md:pl-[72px] */}
                 {children}
             </main>
         </div>
