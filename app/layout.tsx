@@ -11,6 +11,7 @@ import {
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { cn } from "@/lib/utils";
 import { ModalProvider } from "@/components/providers/modal-provider";
+import { SocketProvider } from "@/components/providers/socket-provider";
 
 const font = Open_Sans({ subsets: ["latin"] });
 
@@ -29,14 +30,6 @@ export default function RootLayout({
             <html lang="en" suppressHydrationWarning>
                 <body className={cn(font.className, "bg-white dark:bg-[#313338]")}>
                     <main>
-                        {/* <header>
-                            <SignedOut>
-                                <SignInButton />
-                            </SignedOut>
-                            <SignedIn>
-                                <UserButton />
-                            </SignedIn>
-                        </header> */}
                         <ThemeProvider
                             attribute="class"
                             defaultTheme="dark"
@@ -44,8 +37,10 @@ export default function RootLayout({
                             // forcedTheme="dark"
                             storageKey="discord-theme"
                         >
+                            <SocketProvider>
                             <ModalProvider/>
                             {children}
+                            </SocketProvider>
                         </ThemeProvider>
                     </main>
                 </body>
