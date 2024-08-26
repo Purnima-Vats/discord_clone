@@ -58,7 +58,7 @@ const ChatInput = ({
     }
 
     return (
-        <Form {...form}>
+        <Form {...form} >
             <form onSubmit={form.handleSubmit(onSubmit)}>
                 <FormField
                     control={form.control}
